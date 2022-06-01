@@ -21,7 +21,7 @@ class ProductVariantSerializer(serializers.ModelSerializer):
 
 
 class ProductDetailsSerializer(serializers.ModelSerializer):
-    variants = ProductVariantSerializer(many=True, source='productvariant_set')
+    variants = ProductVariantSerializer(many=True, source='productvariant_set', read_only=True)
 
     class Meta:
         model = Product

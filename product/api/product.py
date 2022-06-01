@@ -19,7 +19,7 @@ class ProductDetails(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ProductDetailsSerializer
     lookup_field = 'id'
 
-    def put(self, request, *args, **kwargs):
+    def patch(self, request, *args, **kwargs):
         super(ProductDetails, self).put(request, *args, **kwargs)
         return Response({'status': True})
 
