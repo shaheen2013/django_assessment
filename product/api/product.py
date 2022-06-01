@@ -7,10 +7,6 @@ from product.models import Product
 from product.serializers.product import ProductListSerializer, ProductDetailsSerializer
 
 
-class ProductFilter:
-    pass
-
-
 class ProductList(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductListSerializer
